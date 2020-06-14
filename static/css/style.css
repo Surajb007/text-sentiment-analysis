@@ -54,10 +54,3 @@ input {
 .login .prediction-text {
   color: white !important;
 }
-
-.footer {
-  color: white;
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-}
