@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <title>Sentiment Analysis</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    </head>
+
+    <body class="container-fluid" style="background: #000;">
+        <div class="login">
+            <h1>Emotion Behind the text</h1>
+            <!-- Main Input For Receiving Query to our ML -->
+            <form action="{{ url_for('predict')}}"method="post">
+                <textarea id="review-text" name="review-text" rows="4" cols="50"></textarea>
+                <button type="submit" class="btn btn-warning">Submit</button>
+            </form>
+            <br>
+            <br>
+            <div class = "prediction-text">
+                {{ prediction_text }}
+            </div>
+        </div>
+
+        <div> 
+            <div class = 'footer'>
+                <p> Created By Suraj </p>
+            </div>
+        </div>
+    </body>
+</html>
